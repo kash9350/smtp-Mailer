@@ -25,7 +25,7 @@ $mail->Password   = $_POST['password'];
 $mail->addReplyTo($_POST['From_Email'], $_POST['From_Name']);
 $mail->setFrom($_POST['From_Email'], $_POST['From_Name']);
 $mail->addAddress($_POST['To_Email'], $_POST['To_Name']);
-$mail->Subject  = "hello (PHPMailer test using SMTP)";
+$mail->Subject  = $_POST['Subject'];
 $body = $_POST['Message'];
 $mail->WordWrap = 78;
 $mail->msgHTML($body, dirname(__FILE__), true); //Create message bodies and embed images
@@ -45,11 +45,12 @@ catch (phpmailerAppException $e) {
 }
  
 if (count($results_messages) > 0) {
-  echo "<h2>Run results</h2>\n";
-  echo "<ul>\n";
-foreach ($results_messages as $result) {
-  echo "<li>$result</li>\n";
-}
-echo "</ul>\n";
+//   echo "<h2>Run results</h2>\n";
+//   echo "<ul>\n";
+// foreach ($results_messages as $result) {
+//   echo "<li>$result</li>\n";
+// }
+// echo "</ul>\n";
+	header('Location: successful.html');  
 }
 ?>
