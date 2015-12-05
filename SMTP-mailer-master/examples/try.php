@@ -18,7 +18,7 @@ $mail->isSMTP();
 $mail->SMTPDebug  = 2;
 $mail->Host       = $_POST['smtp_server'];
 $mail->Port       = $_POST['smtp_port'];
-$mail->SMTPSecure = "ssl";
+$mail->SMTPSecure = $_POST['smtp_security'];
 $mail->SMTPAuth   = true;
 $mail->Username   = $_POST['From_Email'];
 $mail->Password   = $_POST['password'];

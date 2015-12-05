@@ -92,6 +92,7 @@
             border-radius: 6px;
             display: block;
             width: 100%;
+            cursor: pointer;
         }
     </style>
     <script>
@@ -191,6 +192,15 @@
                             <td class="colleft"><label for="smtp_server">SMTP Server</label></td>
                             <td class="colrite">
                                 <input type="text" id="smtp_server" name="smtp_server" style="width:95%;" placeholder="smtp.server.com">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="colleft"><label for="smtp_security">SMTP Security</label></td>
+                            <td class="colrite">
+                                <select name="smtp_security">
+                                  <option value="tls">TLS</option>
+                                  <option value="ssl">SSL</option>
+                                </select>
                             </td>
                         </tr>
                         <tr>
