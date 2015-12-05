@@ -54,6 +54,11 @@ if (count($results_messages) > 0) {
 // }
 // echo "</ul>\n";
 // header('url=successful.html');
-echo '<script type="text/javascript">window.location.href="./successful.html"</script>';
+	if(implode($results_messages)=="Message has been sent using SMTP"){
+		echo '<script type="text/javascript">window.location.href="./successful.html"</script>';
+	}
+	else{
+		echo '<script type="text/javascript">window.location.href="./error.html"</script>';
+	}
 }
 ?>
